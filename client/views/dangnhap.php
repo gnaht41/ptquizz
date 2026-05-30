@@ -53,7 +53,7 @@
                 <div class="d-flex justify-content-center w-100">
                     <div id="g_id_onload"
                         data-client_id="406738188655-6tbqad65pusvs16vf2ep4gli1jae2agt.apps.googleusercontent.com"
-                        data-login_uri="https://ptquizz.mooo.com/project-tracnghiem/client/api/auth/google_callback.php"
+                        data-login_uri="https://ptquizz.mooo.com/client/api/auth/google_callback.php"
                         data-auto_prompt="false">
                     </div>
                     <div class="g_id_signin"

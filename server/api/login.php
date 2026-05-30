@@ -54,7 +54,7 @@ if ($user && password_verify($password, $user['matkhau'])) {
         "id_nguoidung" => $user['id_nguoidung'],
         "ten" => $user['ten'],
         "vaitro" => $user['vaitro'],
-        "avatar" => $user['avatar'] ?? 'default.jpg'
+        "avatar" => !empty($user['avatar']) ? $user['avatar'] : 'default.jpg'
     ];
 
     Api::json([
@@ -65,7 +65,7 @@ if ($user && password_verify($password, $user['matkhau'])) {
             "id" => $user['id_nguoidung'],
             "ten" => $user['ten'],
             "vaitro" => $user['vaitro'],
-            "avatar" => $user['avatar'] ?? 'default.jpg'
+            "avatar" => !empty($user['avatar']) ? $user['avatar'] : 'default.jpg'
         ]
     ]);
 } else {

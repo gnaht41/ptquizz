@@ -107,7 +107,7 @@
                                 <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <div class="position-relative">
-                                        <img src="/project-tracnghiem/server/public/imgs/avatars/<?= htmlspecialchars($_SESSION['user']['avatar'] ?? 'default.jpg') ?>" class="rounded-circle me-2" style="width: 32px; height: 32px; object-fit: cover; border: 2px solid <?= $_SESSION['user']['premium_status'] == 1 ? '#ffc107' : '#e2e8f0' ?>;">
+                                        <img src="/server/public/imgs/avatars/<?= !empty($_SESSION['user']['avatar']) ? htmlspecialchars($_SESSION['user']['avatar']) : 'default.jpg' ?>" class="rounded-circle me-2" style="width: 32px; height: 32px; object-fit: cover; border: 2px solid <?= $_SESSION['user']['premium_status'] == 1 ? '#ffc107' : '#e2e8f0' ?>;">
                                         <?php if ($_SESSION['user']['premium_status'] == 1): ?>
                                             <i class="fas fa-check-circle text-warning position-absolute" style="bottom: -2px; right: 5px; font-size: 0.8rem; background: white; border-radius: 50%;"></i>
                                         <?php endif; ?>

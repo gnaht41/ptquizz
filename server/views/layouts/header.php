@@ -187,7 +187,7 @@
                     <span class="user-role"><?php echo ($_SESSION['user']['vaitro'] == 'admin') ? 'Quản trị viên' : 'Giảng viên'; ?></span>
                 </div>
                 <div style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #fff; box-shadow: 0 0 5px rgba(0,0,0,0.1); overflow: hidden;">
-                    <img id="headerUserAvatar" src="/project-tracnghiem/server/public/imgs/avatars/<?= htmlspecialchars($_SESSION['user']['avatar'] ?? 'default.jpg') ?>" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img id="headerUserAvatar" src="/server/public/imgs/avatars/<?= !empty($_SESSION['user']['avatar']) ? htmlspecialchars($_SESSION['user']['avatar']) : 'default.jpg' ?>" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </button>
 

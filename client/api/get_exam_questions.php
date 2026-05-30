@@ -72,9 +72,9 @@ $ten_baithi = $baithi["ten_baithi"];
 $thoigianlam = (int) $baithi["thoigianlam"];
 $xao_tron = (int) ($baithi["xao_tron"] ?? 0);
 
-// AUTO-REPAIR DATABASE: Ensure columns exist
-$conn->query("ALTER TABLE lanthi ADD COLUMN IF NOT EXISTS last_active DATETIME NULL");
-$conn->query("ALTER TABLE lanthi ADD COLUMN IF NOT EXISTS session_token VARCHAR(255) NULL");
+// AUTO-REPAIR DATABASE: Ensure columns exist (wrapped in try-catch for Aiven compatibility)
+try { $conn->query("ALTER TABLE lanthi ADD COLUMN IF NOT EXISTS last_active DATETIME NULL"); } catch (Exception $e) {}
+try { $conn->query("ALTER TABLE lanthi ADD COLUMN IF NOT EXISTS session_token VARCHAR(255) NULL"); } catch (Exception $e) {}
 
 $session_token = $_GET["token"] ?? "unknown";
 
@@ -165,7 +165,7 @@ if ($res->num_rows > 0) {
     $status = $stmt_status->get_result()->fetch_assoc()["premium_status"] ?? 0;
     
     if ($status == 0) {
-        $conn->query("UPDATE nguoidung SET total_free_attempts = total_free_attempts + 1 WHERE id_nguoidung = $user_id");
+        // Count is derived live from lanthi table - no need to update a separate column
     }
 }
 

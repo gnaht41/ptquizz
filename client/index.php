@@ -154,7 +154,7 @@ switch ($act) {
 // Fetch latest premium info for session
 if (isset($_SESSION['user'])) {
     $conn = Database::connect();
-    $stmt = $conn->prepare("SELECT premium_status, premium_expire, total_free_attempts FROM nguoidung WHERE id_nguoidung = ?");
+    $stmt = $conn->prepare("SELECT premium_status, premium_expire FROM nguoidung WHERE id_nguoidung = ?");
     $stmt->bind_param("i", $_SESSION['user']['id']);
     $stmt->execute();
     $premiumInfo = $stmt->get_result()->fetch_assoc();

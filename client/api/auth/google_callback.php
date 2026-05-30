@@ -48,7 +48,7 @@ if ($stmt->fetch()) {
         "id"     => $id,
         "name"   => $existingName,
         "role"   => $role,
-        "avatar" => $avatar ?? 'default.jpg',
+        "avatar" => !empty($avatar) ? $avatar : 'default.jpg',
     ];
 } else {
     // Tạo người dùng mới (vai trò thí sinh)

@@ -24,7 +24,7 @@
                     <form id="profileForm" style="display:none;" enctype="multipart/form-data">
                         <div class="text-center mb-4">
                             <div class="position-relative d-inline-block">
-                                <img id="avatarPreview" src="/project-tracnghiem/server/public/imgs/avatars/default.jpg" class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+                                <img id="avatarPreview" src="/server/public/imgs/avatars/default.jpg" class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
                                 <label for="profileAvatar" class="position-absolute bottom-0 end-0 bg-primary text-white rounded-circle shadow" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 3px solid white; transition: all 0.2s;">
                                     <i class="fas fa-camera"></i>
                                 </label>
@@ -110,7 +110,7 @@ async function loadProfile() {
         const user = json.data || {};
         
         if (user.avatar) {
-            document.getElementById('avatarPreview').src = `/project-tracnghiem/server/public/imgs/avatars/${user.avatar}`;
+            document.getElementById('avatarPreview').src = `/server/public/imgs/avatars/${user.avatar}`;
         }
         
         document.getElementById('profileName').value = user.ten || '';
@@ -167,7 +167,7 @@ document.getElementById('profileForm').addEventListener('submit', async function
         const newName = document.getElementById('profileName').value.trim();
         document.getElementById('headerUserName').innerText = `Chào, ${newName}`;
         if (json.avatar) {
-            document.getElementById('headerUserAvatar').src = `/project-tracnghiem/server/public/imgs/avatars/${json.avatar}`;
+            document.getElementById('headerUserAvatar').src = `/server/public/imgs/avatars/${json.avatar}`;
         }
 
         await loadProfile();

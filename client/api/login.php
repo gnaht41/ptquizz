@@ -61,7 +61,7 @@ $_SESSION["user"] = [
     "id" => $id,
     "name" => $ten,
     "role" => $vaitro,
-    "avatar" => $avatar ?? 'default.jpg',
+    "avatar" => !empty($avatar) ? $avatar : 'default.jpg',
     "premium_status" => $premium_status,
     "premium_expire" => $premium_expire,
     "attempts_today" => $attemptsToday
@@ -84,7 +84,7 @@ Response::json([
     "email" => $data["email"],
     "ngaytao" => $ngaytao,
     "role" => $vaitro,
-    "avatar" => $avatar ?? 'default.jpg',
+    "avatar" => !empty($avatar) ? $avatar : 'default.jpg',
     "premium_status" => $premium_status,
     "premium_expire" => $premium_expire,
     "attempts_today" => $attemptsToday

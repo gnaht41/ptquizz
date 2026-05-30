@@ -22,7 +22,7 @@ if (!isset($_SESSION['user'])) {
 
                 <div class="text-center mb-5 mt-3">
                     <div class="position-relative d-inline-block mx-auto mb-2">
-                        <img id="avatarPreview" src="/project-tracnghiem/server/public/imgs/avatars/default.jpg" class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                        <img id="avatarPreview" src="/server/public/imgs/avatars/default.jpg" class="rounded-circle" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #fff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
                         <label for="profileAvatar" class="position-absolute bottom-0 end-0 bg-primary text-white rounded-circle shadow" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 3px solid white;">
                             <i class="fa-solid fa-camera"></i>
                         </label>
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (json.success) {
             const user = json.data;
             const avatarFile = user.avatar || 'default.jpg';
-            document.getElementById('avatarPreview').src = `/project-tracnghiem/server/public/imgs/avatars/${avatarFile}`;
+            document.getElementById('avatarPreview').src = `/server/public/imgs/avatars/${avatarFile}`;
             displayName.innerText = user.ten;
             inputTen.value = user.ten;
             inputEmail.value = user.email;
