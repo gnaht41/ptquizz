@@ -1,0 +1,40 @@
+.question-card {
+    border-radius: 10px;
+}
+
+.answer-option {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.answer-option:hover {
+    background: #f8f9fa;
+}
+
+.question-nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.answer-result {
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.answer-result.correct {
+    background: #d4edda;
+}
+
+.answer-result.wrong {
+    background: #f8d7da;
+}
+
+.unanswered-question {
+    border: 1px solid #ffe08a;
+    background: #fffdf3;
+}

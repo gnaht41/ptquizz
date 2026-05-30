@@ -1,0 +1,271 @@
+<?php
+
+return [
+    "auth/login" => [
+        "handler" => __DIR__ . "/../api/login.php",
+        "methods" => ["POST"],
+    ],
+    "auth/register" => [
+        "handler" => __DIR__ . "/../api/register.php",
+        "methods" => ["POST"],
+    ],
+    "auth/google_callback.php" => [
+        "handler" => __DIR__ . "/../api/auth/google_callback.php",
+        "methods" => ["POST"],
+    ],
+    "auth/forgot-password" => [
+        "handler" => __DIR__ . "/../api/auth/forgot_password.php",
+        "methods" => ["POST"],
+    ],
+    "auth/verify-otp" => [
+        "handler" => __DIR__ . "/../api/auth/verify_otp.php",
+        "methods" => ["POST"],
+    ],
+    "auth/reset-password" => [
+        "handler" => __DIR__ . "/../api/auth/reset_password.php",
+        "methods" => ["POST"],
+    ],
+    "exam/list" => [
+        "handler" => __DIR__ . "/../api/get_exams.php",
+        "methods" => ["GET"],
+    ],
+    "exam/subjects" => [
+        "handler" => __DIR__ . "/../api/get_subjects.php",
+        "methods" => ["GET"],
+    ],
+    "exam/questions" => [
+        "handler" => __DIR__ . "/../api/get_exam_questions.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["thisinh"],
+    ],
+    "exam/submit" => [
+        "handler" => __DIR__ . "/../api/submit.php",
+        "methods" => ["POST"],
+        "auth" => true,
+        "roles" => ["thisinh"],
+    ],
+    "exam/sync-draft" => [
+        "handler" => __DIR__ . "/../api/sync_draft.php",
+        "methods" => ["PUT", "POST"],
+        "auth" => true,
+        "roles" => ["thisinh"],
+    ],
+    "result/detail" => [
+        "handler" => __DIR__ . "/../api/get_result.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["thisinh"],
+    ],
+    "history/list" => [
+        "handler" => __DIR__ . "/../api/get_history.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["thisinh"],
+    ],
+    "profile/detail" => [
+        "handler" => __DIR__ . "/../api/get_profile.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["thisinh", "giangvien", "admin"],
+    ],
+    "profile/update" => [
+        "handler" => __DIR__ . "/../api/update_profile.php",
+        "methods" => ["POST", "PATCH"],
+        "auth" => true,
+        "roles" => ["thisinh", "giangvien", "admin"],
+    ],
+    "lecturer/stats" => [
+        "handler" => __DIR__ . "/../api/get_lecturer_stats.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/monhoc/list" => [
+        "handler" => __DIR__ . "/../api/lecturer/monhoc_list.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/monhoc/save" => [
+        "handler" => __DIR__ . "/../api/lecturer/monhoc_save.php",
+        "methods" => ["POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/monhoc/delete" => [
+        "handler" => __DIR__ . "/../api/lecturer/monhoc_delete.php",
+        "methods" => ["DELETE", "POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/baithi/list" => [
+        "handler" => __DIR__ . "/../../server/api/baithi_list.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/baithi/save" => [
+        "handler" => __DIR__ . "/../../server/api/baithi_save.php",
+        "methods" => ["POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/baithi/delete" => [
+        "handler" => __DIR__ . "/../../server/api/baithi_delete.php",
+        "methods" => ["DELETE", "POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/nganhang/list" => [
+        "handler" => __DIR__ . "/../../server/api/nganhang_list.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/nganhang/save" => [
+        "handler" => __DIR__ . "/../../server/api/nganhang_save.php",
+        "methods" => ["POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/nganhang/delete" => [
+        "handler" => __DIR__ . "/../../server/api/nganhang_delete.php",
+        "methods" => ["DELETE", "POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/nganhang/cauhoi/list" => [
+        "handler" => __DIR__ . "/../../server/api/nganhang_cauhoi_list.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/nganhang/cauhoi/save" => [
+        "handler" => __DIR__ . "/../../server/api/nganhang_cauhoi_save.php",
+        "methods" => ["POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/nganhang/cauhoi/delete" => [
+        "handler" => __DIR__ . "/../../server/api/nganhang_cauhoi_delete.php",
+        "methods" => ["DELETE", "POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/nganhang/import-word" => [
+        "handler" => __DIR__ . "/../../server/api/nganhang_import_word.php",
+        "methods" => ["POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/cauhoi/list" => [
+        "handler" => __DIR__ . "/../../server/api/cauhoi_list.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/cauhoi/save" => [
+        "handler" => __DIR__ . "/../../server/api/cauhoi_save.php",
+        "methods" => ["POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/cauhoi/delete" => [
+        "handler" => __DIR__ . "/../../server/api/cauhoi_delete.php",
+        "methods" => ["DELETE", "POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/cauhoi/import-word" => [
+        "handler" => __DIR__ . "/../../server/api/cauhoi_import_word.php",
+        "methods" => ["POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/cauhoi/import-bank" => [
+        "handler" => __DIR__ . "/../../server/api/cauhoi_import_bank.php",
+        "methods" => ["POST"],
+        "auth" => true,
+        "roles" => ["giangvien"],
+    ],
+    "lecturer/ketqua/summary" => [
+        "handler" => __DIR__ . "/../../server/api/ketqua_summary.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["giangvien", "admin"],
+    ],
+    "lecturer/ketqua/submissions" => [
+        "handler" => __DIR__ . "/../../server/api/ketqua_submissions.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["giangvien", "admin"],
+    ],
+    "lecturer/ketqua/detail" => [
+        "handler" => __DIR__ . "/../../server/api/ketqua_detail.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["giangvien", "admin"],
+    ],
+    // --- ADMIN ROUTES ---
+    "admin/dashboard" => [
+        "handler" => __DIR__ . "/../../server/api/admin_dashboard.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["admin"],
+    ],
+    "admin/users/list" => [
+        "handler" => __DIR__ . "/../../server/api/nguoidung_list.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["admin"],
+    ],
+    "admin/users/save" => [
+        "handler" => __DIR__ . "/../../server/api/nguoidung_save.php",
+        "methods" => ["POST"],
+        "auth" => true,
+        "roles" => ["admin"],
+    ],
+    "admin/users/delete" => [
+        "handler" => __DIR__ . "/../../server/api/nguoidung_delete.php",
+        "methods" => ["POST", "DELETE"],
+        "auth" => true,
+        "roles" => ["admin"],
+    ],
+    "admin/users/toggle-status" => [
+        "handler" => __DIR__ . "/../../server/api/nguoidung_toggle_status.php",
+        "methods" => ["POST"],
+        "auth" => true,
+        "roles" => ["admin"],
+    ],
+    "admin/goipremium" => [
+        "handler" => __DIR__ . "/../../server/api/admin_goipremium.php",
+        "methods" => ["GET", "POST", "PATCH", "DELETE"],
+        "auth" => true,
+        "roles" => ["admin"],
+    ],
+    "admin/logs/list" => [
+        "handler" => __DIR__ . "/../../server/api/admin_logs.php",
+        "methods" => ["GET"],
+        "auth" => true,
+        "roles" => ["admin"],
+    ],
+    "premium/create-payment" => [
+        "handler" => __DIR__ . "/../api/premium_create_payment.php",
+        "methods" => ["POST"],
+        "auth" => true,
+    ],
+    "premium/check-status" => [
+        "handler" => __DIR__ . "/../api/check_payment_status.php",
+        "methods" => ["GET"],
+    ],
+    "premium/webhook" => [
+        "handler" => __DIR__ . "/../api/sepay_webhook.php",
+        "methods" => ["POST"],
+    ],
+    "premium/packages" => [
+        "handler" => __DIR__ . "/../../server/api/premium_packages.php",
+        "methods" => ["GET"],
+        "auth" => true,
+    ],
+];

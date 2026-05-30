@@ -1,0 +1,351 @@
+/* ===== RESET NHẸ ===== */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* For flexbox sticky footer */
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Make the main container expand to fill remaining space */
+.container-fluid.p-0 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.main {
+    flex: 1;
+}
+
+/* ===== BRAND TEXT ===== */
+.brand-text {
+    font-size: 20px;
+    font-weight: 700;
+    /* xanh navy hợp logo */
+    transition: 0.2s;
+}
+
+.navbar-brand:hover .brand-text {
+    color: #0d6efd;
+    /* xanh bootstrap */
+}
+
+.navbar-brand {
+    gap: 8px;
+}
+
+/* ===== NAVBAR ===== */
+.topnav-container {
+    background: #ffffff;
+    border-bottom: 2px solid #f1f5f9;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ===== LOGO (logo vuông) ===== */
+.topnav-logo {
+    height: 48px;
+    /* đẹp nhất cho logo vuông */
+    width: 48px;
+    /* giữ vuông */
+    object-fit: cover;
+    border-radius: 12px;
+    /* bo góc nhẹ nhìn sang */
+}
+
+/* ===== BRAND ALIGN ===== */
+.navbar-brand {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ===== NAVBAR HEIGHT ===== */
+.navbar {
+    padding: 8px 0;
+}
+
+.nav-link {
+    color: #4b5563 !important;
+    font-weight: 500;
+    margin: 0 4px;
+    border-radius: 6px;
+    padding: 6px 12px !important;
+    transition: 0.15s;
+}
+
+.nav-link:hover {
+    color: #3b5bdb !important;
+    background: #f0f4ff;
+}
+
+.btn-primary {
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-weight: 500;
+}
+
+/* ===== CONTENT ===== */
+.content-wrapper {
+    background: #fff;
+    padding: 40px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sm-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+.content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ===== LINK ===== */
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+.footer-wrapper {
+    background: #1f2933;
+    color: #cbd5e1;
+}
+
+.footer-wrapper p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-wrapper a {
+    color: #cbd5e1;
+}
+
+.footer-wrapper a:hover {
+    color: #ffffff;
+}
+
+.footer-wrapper ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-wrapper li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Social icons */
+.site-socials {
+    margin-top: 10px;
+}
+
+.social-link {
+    font-size: 22px;
+    margin-right: 10px;
+    color: #cbd5e1;
+}
+
+.social-link:hover {
+    color: #fff;
+}
+
+/* Footer address */
+.footer-addresses {
+    margin-top: 30px;
+    border-top: 1px solid #374151;
+    padding-top: 20px;
+}
+
+.footer-addresses h5 {
+    color: #fff;
+}
+
+.footer-addresses ul {
+    padding-left: 18px;
+}
+
+/* Copyright */
+.footer-copyright {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.font-09 {
+    font-size: 13px;
+}
+
+.text-gray {
+    color: #9ca3af;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+
+    .topnav-logo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .brand-text {
+        font-size: 18px;
+    }
+}
+
+/* ===== EXAM BUTTONS ===== */
+.btn-lam-bai {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    color: #fff !important;
+}
+
+.btn-lam-tiep {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+/* ===== USER DROPDOWN UI ===== */
+.dropdown-menu {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+    padding: 8px 0;
+    margin-top: 12px !important;
+}
+
+.dropdown-item {
+    font-weight: 500;
+    color: #4b5563;
+    padding: 10px 20px !important;
+    transition: 0.2s ease;
+}
+
+/* Hover state */
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f1f5f9;
+    color: #111827;
+}
+
+/* Active state (Khi ấn vào) - Override mặc định màu xanh đậm của Bootstrap làm chìm icon */
+.dropdown-item:active {
+    background-color: #e2e8f0 !important;
+    color: #111827 !important;
+}
+
+/* Nút đăng xuất */
+.dropdown-item.text-danger:hover,
+.dropdown-item.text-danger:focus,
+.dropdown-item.text-danger:active {
+    background-color: #fee2e2 !important;
+    color: #dc2626 !important;
+}
+
+/* ===== HISTORY CARD ===== */
+.history-card {
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(13, 110, 253, 0.1);
+}
+
+/* ===== PREMIUM UI COMPONENTS ===== */
+.premium-card {
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.custom-input-group {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-input-group:focus-within {
+    border-color: #abcbfe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+.custom-input-group .form-control:focus {
+    box-shadow: none;
+    background-color: #f8f9fa !important;
+}
+
+.custom-input-group .input-group-text,
+.custom-input-group .form-control,
+.custom-input-group .btn {
+    background-color: #f8f9fa !important;
+}
+
+.custom-input-group .input-group-text {
+    width: 46px;
+    justify-content: center;
+}
+
+.custom-btn {
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(13, 110, 253, 0.2) !important;
+}

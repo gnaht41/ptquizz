@@ -1,0 +1,81 @@
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f8fafc;
+}
+
+.login-container {
+    background: linear-gradient(135deg, #f0f4f8 0%, #dae2ed 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.loginform {
+    background: #fff;
+    padding: 40px 35px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08); /* Premium soft shadow */
+}
+
+/* Custom Icon Wrapper */
+.auth-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background: #f0f4f8;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Input Group Enhancements */
+.custom-input-group {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-input-group:focus-within {
+    border-color: #abcbfe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+.custom-input-group .form-control:focus {
+    box-shadow: none;
+    background-color: #f8f9fa !important;
+}
+
+.custom-input-group .input-group-text,
+.custom-input-group .form-control,
+.custom-input-group .btn {
+    background-color: #f8f9fa !important; /* Soft gray */
+}
+
+.custom-input-group .input-group-text {
+    width: 46px;
+    justify-content: center;
+}
+
+/* Custom Button */
+.custom-btn {
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(13, 110, 253, 0.2) !important;
+}
+
+@media (max-width: 576px) {
+    .loginform {
+        padding: 30px 20px;
+        border-radius: 16px;
+    }
+}

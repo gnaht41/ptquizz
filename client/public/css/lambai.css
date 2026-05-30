@@ -1,0 +1,110 @@
+﻿.question-card {
+    border-radius: 10px;
+}
+
+.answer-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.answer-option:hover {
+    background: #f8f9fa;
+}
+
+
+.question-nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.qnav-wrapper {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.qnav {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: white;
+    font-weight: 600;
+}
+
+.qnav.answered {
+    background: #198754;
+    color: white;
+    border: none;
+}
+
+
+.flag-btn {
+    background: white;
+    border: 1px solid #ffc107;
+    border-radius: 6px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.flag-btn.active {
+    background: #dc3545;
+    color: white;
+    border: none;
+}
+
+
+.flag-icon {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 16px;
+    height: 16px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #dc3545;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+/* Countdown Timer Styles */
+.countdown-timer {
+    font-size: 36px;
+    font-weight: 700;
+    color: #198754;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    display: inline-block;
+    min-width: 120px;
+}
+
+.countdown-timer.countdown-warning {
+    color: #ffc107;
+    background: #fff3cd;
+    animation: pulse 1s infinite;
+}
+
+.countdown-timer.countdown-danger {
+    color: #dc3545;
+    background: #f8d7da;
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}

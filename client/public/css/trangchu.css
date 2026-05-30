@@ -1,0 +1,488 @@
+/* =========================
+   CSS CHUNG
+========================= */
+
+.home-section {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.homeSwiper {
+  width: 100%;
+}
+
+/* =========================
+   CAROUSEL
+========================= */
+
+.banner-img {
+  width: 100%;
+  height: 520px;
+  /* default desktop */
+  object-fit: cover;
+  /* giữ tỉ lệ, không méo */
+  object-position: center;
+  display: block;
+}
+
+/* Large desktop (>= 1600px) */
+@media (min-width: 1600px) {
+  .banner-img {
+    height: 650px;
+  }
+}
+
+/* Desktop lớn */
+@media (max-width: 1400px) {
+  .banner-img {
+    max-height: 520px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .banner-img {
+    height: 420px;
+  }
+}
+
+/* Tablet landscape */
+@media (max-width: 992px) {
+  .banner-img {
+    height: 300px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .banner-img {
+    max-height: 230px;
+  }
+}
+
+/* Mobile lớn */
+@media (max-width: 576px) {
+  .banner-img {
+    max-height: 200px;
+  }
+}
+
+/* Mobile nhỏ */
+@media (max-width: 476px) {
+  .banner-img {
+    max-height: 150px;
+  }
+}
+
+/* iPhone nhỏ / màn hình cực nhỏ */
+@media (max-width: 370px) {
+  .banner-img {
+    max-height: 100px;
+  }
+}
+
+/* iPhone nhỏ / màn hình cực nhỏ */
+@media (max-width: 220px) {
+  .banner-img {
+    max-height: 80px;
+  }
+}
+
+/* =========================
+    ĐỀ THI 
+========================= */
+
+.home-section {
+  padding: 50px 0;
+}
+
+.home-h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-size: 26px;
+}
+
+
+/* GRID */
+
+.testitem-grid {
+  row-gap: 24px;
+}
+
+
+/* CARD */
+
+.testitem-wrapper {
+  background: #f8f9fc;
+  border-radius: 14px;
+  padding: 22px;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid #eee;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.testitem-wrapper:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+}
+
+
+/* TITLE */
+
+.testitem-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  margin-bottom: 12px;
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* INFO */
+
+.testitem-info-wrapper {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.testitem-info {
+  display: block;
+  margin-bottom: 6px;
+}
+
+
+/* TAG */
+
+.testitem-tags {
+  margin-top: 12px;
+}
+
+.tag {
+  display: inline-block;
+
+  background: #eef2ff;
+  color: #3b5bdb;
+
+  padding: 4px 12px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+
+  margin-right: 6px;
+  margin-bottom: 6px;
+
+  transition: 0.2s;
+}
+
+.tag:hover {
+  background: #3b5bdb;
+  color: #fff;
+}
+
+
+/* BUTTON */
+
+.btn-detail {
+  margin-top: 18px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: 500;
+
+  transition: 0.2s;
+}
+
+.btn-detail:hover {
+  transform: scale(1.02);
+}
+
+
+
+
+/* Mobile nhỏ (iphone SE etc) */
+@media (max-width: 480px) {
+
+  .home-section {
+    padding: 30px 0;
+  }
+
+  .home-h2 {
+    font-size: 20px;
+  }
+
+  .testitem-wrapper {
+    padding: 16px;
+  }
+
+  .testitem-title {
+    font-size: 14px;
+  }
+
+}
+
+
+/* Mobile lớn */
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .testitem-title {
+    font-size: 15px;
+  }
+
+}
+
+
+/* Tablet dọc */
+@media (min-width:768px) and (max-width:991px) {
+
+  .testitem-title {
+    font-size: 15px;
+  }
+
+}
+
+
+/* Laptop nhỏ */
+@media (min-width:992px) and (max-width:1199px) {
+
+  .testitem-title {
+    font-size: 16px;
+  }
+
+}
+
+
+/* Desktop lớn */
+@media (min-width:1200px) {
+
+  .home-h2 {
+    font-size: 28px;
+  }
+
+  .testitem-title {
+    font-size: 17px;
+  }
+
+}
+
+
+/* ======================
+   Tư vấn
+====================== */
+.home-section {
+  padding: 60px 0;
+  /* giống đề thi mới nhất */
+}
+
+.home-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.quiz-section {
+  margin-top: 20px;
+}
+
+.quiz-content {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.quiz-content p {
+  margin-bottom: 15px;
+}
+
+.highlight-text {
+  font-weight: 600;
+  color: #3b5bdb;
+}
+
+/* FORM */
+
+.quiz-form {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+
+  border: 1px solid #eee;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.quiz-form .form-control {
+  margin-bottom: 12px;
+  height: 45px;
+  border-radius: 8px;
+}
+
+.btn-submit {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+
+
+/* Mobile */
+@media (max-width:576px) {
+
+  .home-title {
+    font-size: 22px;
+  }
+
+  .quiz-content {
+    font-size: 14px;
+  }
+
+  .quiz-form {
+    margin-top: 20px;
+  }
+
+}
+
+/* Tablet */
+@media (min-width:768px) {
+
+  .quiz-content {
+    font-size: 15px;
+  }
+
+}
+
+/* Desktop lớn */
+@media (min-width:1200px) {
+
+  .quiz-content {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =====================
+        BANNER
+===================== */
+.testonline-banner {
+  width: 100%;
+  aspect-ratio: 16 / 4;
+  /* banner ngang */
+  overflow: hidden;
+}
+
+.testonline-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* full đẹp */
+}
+
+
+/* Desktop lớn */
+.testonline-banner {
+  height: 200px;
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .testonline-banner {
+    height: 180px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .testonline-banner {
+    height: 150px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .testonline-banner {
+    height: 120px;
+  }
+}
+
+/* =====================
+        Khóa học nổi bật 
+===================== */
+.course-card {
+  cursor: pointer;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  z-index: 5;
+  /* nổi lên trên img */
+}
+
+.course-body {
+  padding: 15px;
+}
+
+.course-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.course-rating {
+  font-size: 14px;
+  color: #ff9800;
+}
+
+.course-tag {
+  background: #eef3ff;
+  color: #3f51b5;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.course-price {
+  margin-top: 10px;
+}
+
+.price-new {
+  color: #2ecc71;
+  font-weight: 600;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 10px;
+}
